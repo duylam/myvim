@@ -44,6 +44,9 @@ runtime! plugin/sensible.vim
 "
 set ruler
 
+" Allow backspacing over everything in insert mode 
+set backspace=indent,eol,start
+
 " Set indent for python and proto language
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType proto setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
