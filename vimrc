@@ -33,6 +33,8 @@ Plug 'sheerun/vim-polyglot'
 
 " For browsing file/folder in tree
 Plug 'preservim/nerdtree'
+
+Plug 'MLKrisJohnson/vim-dclog'
 call plug#end()
 
 " Load vim-sensible plugin earlier so that we can override them in below
@@ -84,7 +86,7 @@ command! -bang Ls redir @" | silent ls<bang> | redir END | echo " " |
 let NERDTreeShowHidden=1
 
 " ignore files in nerd tree
-let NERDTreeIgnore=['\.DS_Store$', '\.git$', '__pycache__', '\.pyc$', '\.sw[op]$'] 
+let NERDTreeIgnore=['\.DS_Store$', '\.git$', '__pycache__', '\.pyc$', '\.sw.$'] 
 
 "
 " Plugin 'rust-lang/rust.vim' config
