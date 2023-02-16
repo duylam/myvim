@@ -78,6 +78,10 @@ command! -bang Ls redir @" | silent ls<bang> | redir END | echo " " |
  \ }
  \ <CR>
 
+" Turn on spell check plugin
+" See https://vim.fandom.com/wiki/Use_integrated_spell_checking
+set spell
+
 "
 " Plugin preservim/nerdtree config
 "
