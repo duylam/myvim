@@ -35,6 +35,13 @@ Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 
 Plug 'MLKrisJohnson/vim-dclog'
+
+" Integrate OpenAI to vim
+" See https://github.com/dpayne/CodeGPT.nvim
+Plug 'nvim-lua/plenary.nvim'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'dpayne/CodeGPT.nvim'
+
 call plug#end()
 
 " Load vim-sensible plugin earlier so that we can override them in below
