@@ -1,4 +1,4 @@
-" Auto install vim-pug
+"n Auto install vim-pug
 " See https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -33,6 +33,12 @@ Plug 'sheerun/vim-polyglot'
 
 " For browsing file/folder in tree
 Plug 'preservim/nerdtree'
+
+" Integrate OpenAI to vim
+" See https://github.com/dpayne/CodeGPT.nvim
+Plug 'nvim-lua/plenary.nvim'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'dpayne/CodeGPT.nvim'
 call plug#end()
 
 " Load vim-sensible plugin earlier so that we can override them in below
@@ -50,6 +56,10 @@ set backspace=indent,eol,start
 " Set indent for python and proto language
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType proto setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+
+" Turn off spell check plugin by default
+" See https://vim.fandom.com/wiki/Use_integrated_spell_checking
+set nospell
 
 "
 " Plugin preservim/nerdtree config
