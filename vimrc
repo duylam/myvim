@@ -33,8 +33,6 @@ Plug 'sheerun/vim-polyglot'
 
 " For browsing file/folder in tree
 Plug 'preservim/nerdtree'
-
-Plug 'MLKrisJohnson/vim-dclog'
 call plug#end()
 
 " Load vim-sensible plugin earlier so that we can override them in below
@@ -52,31 +50,6 @@ set backspace=indent,eol,start
 " Set indent for python and proto language
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType proto setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
-
-" The output of :ls is sorted by buffer number.
-" Define command :Ls is the same as the output of :ls except that the output is sorted by buffer name.
-" See https://vim.fandom.com/wiki/List_buffers_sorted_by_name
-command! -bang Ls redir @" | silent ls<bang> | redir END | echo " " |
- \ perl {
- \ my $msg=VIM::Eval('@"');
- \ my %list=();
- \ my $key, $value;
- \ while($msg =~ m/(.*?line\s+\d+)/g)
- \ {
- \ $value = $1;
- \ $value =~ m/"([^"]+)"/;
- \ $key = $1;
- \ ($^O =~ /mswin/i) and $key = lc($key);
- \ $list{$key} = $value;
- \ }
- \ my $msg = '';
- \ for $key (sort keys %list)
- \ {
- \ $msg .= "$list{$key}\n";
- \ }
- \ VIM::Msg($msg);
- \ }
- \ <CR>
 
 "
 " Plugin preservim/nerdtree config
