@@ -28,17 +28,21 @@ Plug 'tpope/vim-sensible'
 " For Rust language
 Plug 'rust-lang/rust.vim'
 
-" For syntax highlight
+" For syntax highlight in most of popular languages like
+"   * Rust
+"   * Java, C#, C, C++
+"   * JavaScript, Python
+"   * Protobuf, nix
+"   * Bash
+"   * SQL
 Plug 'sheerun/vim-polyglot'
 
 " For browsing file/folder in tree
 Plug 'preservim/nerdtree'
 
-" Integrate OpenAI to vim
-" See https://github.com/dpayne/CodeGPT.nvim
-Plug 'nvim-lua/plenary.nvim'
-Plug 'MunifTanjim/nui.nvim'
-Plug 'dpayne/CodeGPT.nvim'
+" For OpenAI API integration, need extra
+" setup from https://github.com/madox2/vim-ai
+Plug 'madox2/vim-ai'
 call plug#end()
 
 " Load vim-sensible plugin earlier so that we can override them in below
@@ -53,7 +57,7 @@ set ruler
 " Allow backspacing over everything in insert mode 
 set backspace=indent,eol,start
 
-" Set indent for python and proto language
+" Set indent for languages
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType proto setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 
@@ -69,7 +73,7 @@ set nospell
 let NERDTreeShowHidden=1
 
 " ignore files in nerd tree
-let NERDTreeIgnore=['\.DS_Store$', '\.git$', '__pycache__', '\.pyc$', '\.sw.$'] 
+let NERDTreeIgnore=['\.DS_Store$', '\.git$', '__pycache__$', '\.pyc$', '\.sw.$', '\.vagrant$']
 
 "
 " Plugin 'rust-lang/rust.vim' config

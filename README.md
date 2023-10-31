@@ -21,8 +21,8 @@ source /home/<your username>/myvim/vimrc
 
 1. Pre-installed plugins
 1. Vim configs
-1. Commands:
-  - `:Ls`: similar as `:ls` but filenames are ordered
+1. Extra configs:
+  - https://github.com/madox2/vim-ai
 
 # 3. Reference
 
