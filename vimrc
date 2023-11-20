@@ -73,7 +73,7 @@ set nospell
 let NERDTreeShowHidden=1
 
 " ignore files in nerd tree
-let NERDTreeIgnore=['\.DS_Store$', '\.git$', '__pycache__$', '\.pyc$', '\.sw.$', '\.vagrant$']
+let NERDTreeIgnore=['\.DS_Store$', '\.git$', '__pycache__$', '\.pyc$', '\.sw.$', '\.vagrant$', '\.gradle$']
 
 "
 " Plugin 'rust-lang/rust.vim' config
