@@ -23,6 +23,7 @@ source /home/<your username>/myvim/vimrc
 1. Vim configs
 1. Extra configs:
   - https://github.com/madox2/vim-ai
+  - https://docs.github.com/en/copilot/getting-started-with-github-copilot?tool=vimneovim
 
 # 3. Reference
 

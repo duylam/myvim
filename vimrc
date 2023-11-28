@@ -43,6 +43,8 @@ Plug 'preservim/nerdtree'
 " For OpenAI API integration, need extra
 " setup from https://github.com/madox2/vim-ai
 Plug 'madox2/vim-ai'
+
+Plug 'github/copilot.vim'
 call plug#end()
 
 " Load vim-sensible plugin earlier so that we can override them in below
