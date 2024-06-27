@@ -42,7 +42,7 @@ Plug 'preservim/nerdtree'
 
 " For OpenAI API integration, need extra
 " setup from https://github.com/madox2/vim-ai
-Plug 'madox2/vim-ai'
+"Plug 'madox2/vim-ai'
 
 Plug 'github/copilot.vim'
 call plug#end()
@@ -66,6 +66,9 @@ autocmd FileType proto setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 " Turn off spell check plugin by default
 " See https://vim.fandom.com/wiki/Use_integrated_spell_checking
 set nospell
+
+" Solve the issue https://jameschambers.co.uk/vim-typescript-slow
+set re=0
 
 "
 " Plugin preservim/nerdtree config
